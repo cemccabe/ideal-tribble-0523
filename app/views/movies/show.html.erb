@@ -5,4 +5,8 @@ Creation Year: <%= @movie.creation_year %>
 <br>
 Genre: <%= @movie.genre %>
 <br>
-<h3> ACTORS </h3>
+<h3> ACTORS BY AGE </h3>
+<% @movie.actors_by_age.each do |actor| %>
+  <%= actor.name %>
+  <br>
+<% end %>

@@ -11,3 +11,6 @@
 @movie1 = @studio1.movies.create!(title: "Top Gun", creation_year: 1986, genre: "Action")
 @movie2 = @studio2.movies.create!(title: "Harry Potter", creation_year: 2001, genre: "Fantasy")
 @movie3 = @studio1.movies.create!(title: "Dumb and Dumber", creation_year: 1994, genre: "Comedy")
+@actor1 = @movie1.actors.create!(name: "Tom Cruise", age: 60)
+@actor2 = @movie1.actors.create!(name: "Val Kilmer", age: 63)
+@actor3 = @movie1.actors.create!(name: "Kelly McGillis", age: 65)
