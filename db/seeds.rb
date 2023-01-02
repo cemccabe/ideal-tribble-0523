@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+@studio1 = Studio.create!(name: "Paramount Pictures", location: "Hollywood")
+@studio2 = Studio.create!(name: "Universal Studios", location: "Los Angeles")
+@movie1 = @studio1.movies.create!(title: "Top Gun", creation_year: 1986, genre: "Action")
+@movie2 = @studio2.movies.create!(title: "Harry Potter", creation_year: 2001, genre: "Fantasy")
+@movie3 = @studio1.movies.create!(title: "Dumb and Dumber", creation_year: 1994, genre: "Comedy")
