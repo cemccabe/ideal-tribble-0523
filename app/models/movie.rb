@@ -8,6 +8,6 @@ class Movie < ApplicationRecord
   end
 
   def average_age
-    self.actors.average(:age)
+    self.actors.average(:age).round(1)
   end
 end
