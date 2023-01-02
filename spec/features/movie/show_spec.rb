@@ -14,7 +14,7 @@ RSpec.describe Movie, type: :feature do
     end
 
     it 'I see the movie\'s title, creation year, and genre,' do
-      visit "/movies/#{movie1.id}"
+      visit "/movies/#{@movie1.id}"
 
       expect(page).to have_content "Top Gun"
       expect(page).to have_content "1986"
@@ -22,14 +22,14 @@ RSpec.describe Movie, type: :feature do
     end
 
     it 'and a list of all its actors from youngest to oldest.' do
-      visit "/movies/#{movie1.id}"
+      visit "/movies/#{@movie1.id}"
 
       expect("Tom Cruise").to appear_before "Val Kilmer"
       expect("Val Kilmer").to appear_before "Kelly McGillis"
     end
 
     it 'And I see the average age of all of the movie\'s actors' do
-      visit "/movies/#{movie1.id}"
+      visit "/movies/#{@movie1.id}"
 
       expect(page).to have_content "Average Age: 62.7"
     end
